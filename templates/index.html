@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murder Mystery Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img id="backgroundImage" class="background-image" src="/static/images/backgroundreal1.png" style="display: none;">
+    <img id="backgroundImage" class="background-image" src="/static/images/backgroundreal2.png" style="display: none;">
+    <img id="backgroundImage" class="background-image" src="/static/images/backgroundreal3.png" style="display: none;">
+    <img id="backgroundImage" class="background-image" src="/static/images/backgroundreal4.png" style="display: none;">
+    <img id="backgroundImage" class="background-image" src="/static/images/backgroundreal5.png" style="display: none;">
+
+
+
+
+    <div class="intro-screen" id="introScreen">
+        <div class="logo">
+            <h1>MURDER MYSTERY</h1>
+        </div>
+        <button class="begin-button" id="beginButton">START</button>
+    </div>
+    <div class="main-game" id="mainGame" style="display: none;">
+        <div class="time-container">
+            <input type="range" min="0" max="4" value="0" class="slider" id="timeSlider">
+            <div id="timeDisplay">12:00 PM</div>
+        </div>
+
+
+        <div id="sidebar" class="sidebar">
+            <div id="suspectCards" class="suspect-cards">
+            </div>
+            <div id="sidebarButton" class="slider-button">☰</div>
+        </div>
+        
+
+        <div class="image-scroller-container">
+            <button class="nav-button" id="prevButton">&#10094;</button>
+            <div class="image-scroller" id="imageScroller">
+                <div class="image-wrapper">
+                    <img src="/static/images/library.png" class="scroller-image" alt="Library">
+                    <img src="/static/images/cafe.png" class="scroller-image" alt="Cafe">
+                    <img src="/static/images/cinema.png" class="scroller-image" alt="Cinema">
+                    <img src="/static/images/garage.png" class="scroller-image" alt="Garage">
+                    <img src="/static/images/gym.png" class="scroller-image" alt="Gym">
+                    <img src="/static/images/home.png" class="scroller-image" alt="Home">
+                    <img src="/static/images/mall.png" class="scroller-image" alt="Mall">
+                    <img src="/static/images/office.png" class="scroller-image" alt="Office">
+                    <img src="/static/images/park.png" class="scroller-image" alt="Park">
+                    <img src="/static/images/townhall.png" class="scroller-image" alt="Townhall">
+                </div>
+            </div>
+            <button class="nav-button" id="nextButton">&#10095;</button>
+        </div>
+
+        <div id="textDescription" class="text-description">
+        </div>
+        
+        <button class="goto-results-button" id="gotoResultsButton">I know the answer</button>
+
+        
+
+    
+    </div>
+  
+    <div class="Results" id="results" style="display: none;">
+
+
+
+        <div class="selector-container">
+            <div class="selector-card">
+                <div class="selector-label">Who was the murderer?</div>
+                <div class="card-content" id="murdererCard">
+                    <div class="card-front">Alexander Brooks</div>
+                    <div class="card-back">Bethany Clarke</div>
+                </div>
+            </div>
+            <div class="selector-card">
+                <div class="selector-label">Which weapon was used?</div>
+                <div class="card-content" id="weaponCard">
+                    <div class="card-front">Scalpel</div>
+                    <div class="card-back">Poison</div>
+                </div>
+            </div>
+            <div class="selector-card">
+                <div class="selector-label">How was the murder done?</div>
+                <div class="card-content" id="murderMethodCard">
+                    <div class="card-front">Stabbing</div>
+                    <div class="card-back">Bludgeoning</div>
+                </div>
+            </div>
+        </div>
+        <button class="check-results-button" id="checkResultsButton">Check Results</button>
+
+
+
+    </div>
+
+    <div id="storyButtons" class="story-buttons" style="display: none;">
+        <button id="story1" class="story-button">Case 1</button>
+        <button id="story2" class="story-button">Case 2</button>
+        <button id="story3" class="story-button">Case 3</button>
+    </div>
+
+
+    <div id="overlay">
+        <div class="message">Try again</div>
+    </div>
+
+    <div id="stopwatch">00:00:00</div>
+    <div id="resultMessage">You finished in 00:00:00<br>It took you X tries</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
