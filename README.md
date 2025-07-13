@@ -14,9 +14,9 @@ A Python and JS Website that contains a murder mystery game with multiple storie
 **Used:** HTML, CSS, JS, Python Flask  
 
 * **Flask router** – `app.py` for three endpoints:  
-  * `/` → serves the game shell (`index.html`)  
-  * `/get_story_data/<story_id>` → JSON with locations, suspects, weapons, etc.  
-  * `/complete_case` / `/get_completed_cases` → track solved cases in the session
+  * `/` for the main page (`index.html`)  
+  * `/get_story_data/<story_id>` JSON with locations, suspects, weapons, etc.  
+  * `/complete_case` / `/get_completed_cases` track solved cases in the session
 * **Data-first design** – every story’s clues live in plain Python dicts (`static/data/*.py`), so adding a new case is simple
 * **Front-end** – The JS builds an interactive “evidence board”: click a location & time, read the clue card, pick suspect / weapon / method, then hit **Check Results**
 
@@ -33,7 +33,7 @@ A Python and JS Website that contains a murder mystery game with multiple storie
 
 ## Lessons Learned 
 
-1. **Data-driven storytelling** → separating narrative text from logic which made content iteration painless
+1. **Data-driven storytelling** separating narrative text from logic which made content iteration painless
 2. How to use Flask Python with JS
 
 ---
