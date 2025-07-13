@@ -3,15 +3,15 @@ A Python and JS Website that contains a murder mystery game with multiple storie
 
 # Preview
 
-![Hero screenshot](images/cases.png)
-![Hero screenshot](images/page.png)
-![Hero screenshot](images/result.png)
+![Cases screenshot](images/cases.png)
+![Page screenshot](images/page.png)
+![Result screenshot](images/result.png)
 
 ---
 
 ## How It’s Made 
 
-**Tech used:** HTML, CSS, JS, Python Flask  
+**Used:** HTML, CSS, JS, Python Flask  
 
 * **Flask router** – `app.py` for three endpoints:  
   * `/` → serves the game shell (`index.html`)  
